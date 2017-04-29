@@ -33,32 +33,30 @@ For Windows (32 and 64-bit) please use graphicsmagic-static.
 Best usage is with npm module gm
 
 ``` js
+var os = require("os");
+var graphicsmagick = require("graphicsmagick-static");
+var imagemagick = require("imagemagick-darwin-static");
+var imageHandler = null;
 
-        var os = require("os");
-        var graphicsmagick = require("graphicsmagick-static");
-        var imagemagick = require("imagemagick-darwin-static");
-        var imageHandler = null;
-        
-        if (os.platform() == "win32") {
-            gm = require("gm").subClass({
-                appPath: path.join(graphicsmagick.path, "/")
-            })
-        } else {
+if (os.platform() == "win32") {
+    gm = require("gm").subClass({
+        appPath: path.join(graphicsmagick.path, "/")
+    })
+} else {
 
-            gm = require("gm").subClass({
-                imageMagick: true,
-                appPath: path.join(imagemagick, "/")
-            })
-        }
-        
-        // then do any stuff you need
-        
-        gm("/path/to/image.png").resize(150,150).write("/new/path.jpg", (err) => {
-            
-            // here an example
-            if (err) return callback(err, null);
-        });
+    gm = require("gm").subClass({
+        imageMagick: true,
+        appPath: path.join(imagemagick, "/")
+    })
+}
 
+// then do any stuff you need
+
+gm("/path/to/image.png").resize(150,150).write("/new/path.jpg", (err) => {
+    
+    // here an example
+    if (err) return callback(err, null);
+});
 ```
 
 ## Electron and Asar
@@ -70,7 +68,7 @@ How ever, when done so, you will have to replace the path of the **app.asar** to
 
 This could be achieved by a helper class as given:
 
-```js
+``` js
 import path from 'path';
 
 export default class AppPaths {
@@ -89,31 +87,29 @@ let fixedPath = AppPaths.replaceAsar(imagemagickPath);
 
 // Example for using ASAR:
 
- var os = require("os");
-        var graphicsmagick = require("graphicsmagick-static");
-        var imagemagick = require("imagemagick-darwin-static");
-        var imageHandler = null;
-        
-        if (os.platform() == "win32") {
-            gm = require("gm").subClass({
-                appPath: AppPaths.replaceAsar(path.join(graphicsmagick.path, "/"))
-            })
-        } else {
+var os = require("os");
+var graphicsmagick = require("graphicsmagick-static");
+var imagemagick = require("imagemagick-darwin-static");
+var imageHandler = null;
 
-            gm = require("gm").subClass({
-                imageMagick: true,
-                appPath: AppPaths.replaceAsar(path.join(imagemagick.path, "/"))
-            })
-        }
-        
-        // then do any stuff you need
-        
-        gm("/path/to/image.png").resize(150,150).write("/new/path.jpg", (err) => {
-            
-            // here an example
-            if (err) return callback(err, null);
-        });
+if (os.platform() == "win32") {
+    gm = require("gm").subClass({
+        appPath: AppPaths.replaceAsar(path.join(graphicsmagick.path, "/"))
+    })
+} else {
 
+    gm = require("gm").subClass({
+        imageMagick: true,
+        appPath: AppPaths.replaceAsar(path.join(imagemagick.path, "/"))
+    })
+}
 
+// then do any stuff you need
+
+gm("/path/to/image.png").resize(150,150).write("/new/path.jpg", (err) => {
+    
+    // here an example
+    if (err) return callback(err, null);
+});
 ```
 

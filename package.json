@@ -1,6 +1,6 @@
 {
   "name": "imagemagick-darwin-static",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "static library of imagemagic for darwin x64",
   "keywords": [
     "static",

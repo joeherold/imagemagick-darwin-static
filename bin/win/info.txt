@@ -1,0 +1,1 @@
+for windows, graphicsmagic-static is used. no extra libraries

@@ -1,5 +1,7 @@
 *.swp
 .DS_Store
 .idea/
+.bundle_src/
 node_modules/
+bin/osx/imagematick/
 npm-debug.log

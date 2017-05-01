@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuremap [
+<!ELEMENT configuremap (configure)+>
+<!ELEMENT configure (#PCDATA)>
+<!ATTLIST configure name CDATA #REQUIRED>
+<!ATTLIST configure value CDATA #REQUIRED>
+]>
+<configuremap>
+  <configure name="CC" value="clang"/>
+  <configure name="CFLAGS" value="-I/usr/include/libxml2 -I/usr/local/Cellar/libpng/1.6.29/include/libpng16 -I/usr/local/Cellar/xz/5.2.3/include -I/usr/local/opt/freetype/include/freetype2    -g -O2 -Wall -mtune=haswell -fexceptions -D_FORTIFY_SOURCE=0 -D_THREAD_SAFE -pthread -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="CODER_PATH" value="/usr/local/Cellar/imagemagick/7.0.5-5/lib/ImageMagick/modules-Q16HDRI/coders"/>
+  <configure name="CONFIGURE_PATH" value="/usr/local/Cellar/imagemagick/7.0.5-5/etc/ImageMagick-7/"/>
+  <configure name="CONFIGURE" value="./configure  '--disable-osx-universal-binary' '--prefix=/usr/local/Cellar/imagemagick/7.0.5-5' '--disable-dependency-tracking' '--disable-silent-rules' '--disable-shared' '--enable-static' '--without-modules' '--disable-opencl' '--disable-openmp' '--with-webp=yes' '--without-openjp2' '--without-gslib' '--with-gs-font-dir=/usr/local/share/ghostscript/fonts' '--without-fftw' '--without-pango' '--without-x' '--with-freetype=yes' '--enable-zero-configuration' 'CC=clang' 'CXX=clang++' 'PKG_CONFIG_PATH=/usr/local/opt/xz/lib/pkgconfig:/usr/local/opt/libpng/lib/pkgconfig:/usr/local/opt/libtiff/lib/pkgconfig:/usr/local/opt/freetype/lib/pkgconfig:/usr/local/opt/webp/lib/pkgconfig' 'PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig:/usr/local/Homebrew/Library/Homebrew/os/mac/pkgconfig/10.12'"/>
+  <configure name="COPYRIGHT" value="Copyright (C) 1999-2016 ImageMagick Studio LLC"/>
+  <configure name="CPPFLAGS" value="-I/usr/local/Cellar/imagemagick/7.0.5-5/include/ImageMagick-7"/>
+  <configure name="CXXFLAGS" value="-g -O2 -D_THREAD_SAFE -pthread"/>
+  <configure name="CXX" value="clang++"/>
+  <configure name="DEFS" value="-DHAVE_CONFIG_H"/>
+  <configure name="DELEGATES" value="bzlib mpeg freetype jng jpeg lzma png tiff webp xml zlib"/>
+  <configure name="DISTCHECK_CONFIG_FLAGS" value="'CC=clang' 'CXX=clang++'  --disable-deprecated  --with-quantum-depth=16  --with-jemalloc=no  --with-umem=no  --with-autotrace=no  --with-fftw=no  --with-gslib=no  --with-fontpath=  --with-gs-font-dir=/usr/local/share/ghostscript/fonts  --with-openjp2=no  --with-pango=no  --with-rsvg=no  --with-perl=no "/>
+  <configure name="DOCUMENTATION_PATH" value="/usr/local/Cellar/imagemagick/7.0.5-5/share/doc/ImageMagick-7"/>
+  <configure name="EXEC-PREFIX" value="/usr/local/Cellar/imagemagick/7.0.5-5"/>
+  <configure name="EXECUTABLE_PATH" value="/usr/local/Cellar/imagemagick/7.0.5-5/bin"/>
+  <configure name="FEATURES" value="DPC HDRI Zero-configuration Cipher"/>
+  <configure name="FILTER_PATH" value="/usr/local/Cellar/imagemagick/7.0.5-5/lib/ImageMagick/modules-Q16HDRI/filters"/>
+  <configure name="GIT_REVISION" value="11848" />
+  <configure name="HOST" value="x86_64-apple-darwin16.5.0"/>
+  <configure name="INCLUDE_PATH" value="/usr/local/Cellar/imagemagick/7.0.5-5/include/ImageMagick-7"/>
+  <configure name="LDFLAGS" value="-L/usr/local/Cellar/imagemagick/7.0.5-5/lib "/>
+  <configure name="LIBRARY_PATH" value="/usr/local/Cellar/imagemagick/7.0.5-5/lib/ImageMagick"/>
+  <configure name="LIBS" value="   -ltiff -L/usr/local/opt/freetype/lib -lfreetype  -ljpeg   -L/usr/local/Cellar/libpng/1.6.29/lib -lpng16       -lwebp       -L/usr/local/Cellar/xz/5.2.3/lib -llzma -lbz2     -lxml2  -lz  -lm     "/>
+  <configure name="LIB_VERSION_NUMBER" value="7,0,5,5"/>
+  <configure name="LIB_VERSION" value="0x705"/>
+  <configure name="NAME" value="ImageMagick"/>
+  <configure name="PCFLAGS" value="-DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="PREFIX" value="/usr/local/Cellar/imagemagick/7.0.5-5"/>
+  <configure name="QuantumDepth" value="16"/>
+  <configure name="RELEASE_DATE" value="2017-05-02"/>
+  <configure name="SHAREARCH_PATH" value="/usr/local/Cellar/imagemagick/7.0.5-5/lib/ImageMagick/config-Q16HDRI"/>
+  <configure name="SHARE_PATH" value="/usr/local/Cellar/imagemagick/7.0.5-5/share/ImageMagick-7"/>
+  <configure name="TARGET_CPU" value="x86_64"/>
+  <configure name="TARGET_OS" value="darwin16.5.0"/>
+  <configure name="TARGET_VENDOR" value="apple"/>
+  <configure name="VERSION" value="7.0.5"/>
+  <configure name="WEBSITE" value="http://www.imagemagick.org"/>
+</configuremap>

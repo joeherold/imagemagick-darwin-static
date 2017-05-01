@@ -1,5 +1,6 @@
 var os = require('os')
-var path = require('path')
+var path = require('path');
+
 
 var platform = os.platform()
 if (platform !== 'linux' && platform !== 'darwin' && platform !== 'win32') {
@@ -18,7 +19,7 @@ var imagemagickPath = path.join(
     'bin',
     'osx',
     'imagemagick',
-    '7.0.5-4',
+    '7.0.5-5',
     'bin'
 )
 

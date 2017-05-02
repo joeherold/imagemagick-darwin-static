@@ -15,8 +15,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "rm -rf ./bin/osx/imagemagick/* || true && rm -rf ./bundle/7.0.5-5.tar.gz || true &&  cd ./bundle_src && tar -czvf ../bundle/7.0.5-5.tar.gz ./7.0.5-5",
-    "postinstall": "cd ./bundle && tar -xzvf ./7.0.5-5.tar.gz -C ../bin/osx/imagemagick/ && rm -r 7.0.5-5.tar.gz"
+    "prepublish": "node ./prepublish.js",
+    "postinstall": "node ./install.js"
   },
   "author": "Johannes Pichler <j.pichler@webpixels.at>",
   "email": "j.pichler@webpixels.at",
@@ -27,5 +27,12 @@
   "bugs": {
     "url": "https://github.com/joeherold/imagemagick-darwin-static/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^3.0.0",
+    "tar.gz": "^1.0.5"
+  },
+  "devDependencies": {
+
+  }
 }

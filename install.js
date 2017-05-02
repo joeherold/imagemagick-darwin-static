@@ -4,7 +4,7 @@ var fs = require('fs');
 var fse = require('fs-extra');
 var os = require('os');
 var path = require('path');
-var targz = require('tar.gz');
+var targz = require('node-tar.gz');
 var version = "7.0.5-5";
 
 // Using callbacks
@@ -13,7 +13,7 @@ targz().extract(path.join(__dirname, '/bundle/' + version + '.tar.gz'), path.joi
     if (err)
         console.log('Something is wrong ', err.stack);
 
-    fse.emptyDirSync(path.join(__dirname, "bundle"));
+    fse.removeSync(path.join(__dirname, "bundle"));
     console.log('Successfully extracted;!');
 });
 

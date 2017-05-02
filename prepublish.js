@@ -5,7 +5,7 @@ var fse = require('fs-extra');
 var os = require('os');
 var path = require('path');
 
-var targz = require('tar.gz');
+var targz = require('node-tar.gz');
 
 var version = "7.0.5-5";
 

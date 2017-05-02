@@ -60,7 +60,8 @@ typings/
 .env
 
 
-.bin/osx/imagemagick/
-.bundle/
+bin/osx/imagemagick/
+bundle/
+
 
 

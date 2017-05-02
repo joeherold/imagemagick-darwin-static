@@ -1,6 +1,6 @@
 {
   "name": "imagemagick-darwin-static",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "static library of imagemagic for darwin x64",
   "keywords": [
     "static",
@@ -10,7 +10,7 @@
     "mac",
     "osx",
     "darwin",
-    "ngx642"
+    "x64"
   ],
   "main": "index.js",
   "scripts": {
@@ -30,9 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^3.0.0",
-    "tar.gz": "^1.0.5"
+    "node-tar.gz": "^1.0.0"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }

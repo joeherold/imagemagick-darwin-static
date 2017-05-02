@@ -4,8 +4,6 @@ var fs = require('fs');
 var fse = require('fs-extra');
 var os = require('os');
 var path = require('path');
-var decompress = require('decompress');
-var decompressTar = require('decompress-tar');
 var targz = require('tar.gz');
 var version = "7.0.5-5";
 

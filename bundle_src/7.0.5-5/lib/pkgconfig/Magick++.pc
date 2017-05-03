@@ -1,8 +1,8 @@
-prefix=/usr/local/Cellar/imagemagick/7.0.5-5
+prefix=/Users/johannespichler/Downloads/newTest/build
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include/ImageMagick-7
-includearchdir=/usr/local/Cellar/imagemagick/7.0.5-5/include/ImageMagick-7
+includearchdir=/Users/johannespichler/Downloads/newTest/build/include/ImageMagick-7
 libname=Magick++-7.Q16HDRI
  
 Name: Magick++

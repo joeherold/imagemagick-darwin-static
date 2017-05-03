@@ -37,7 +37,7 @@
 
 /* Directory where architecture-dependent configuration files live. */
 #ifndef MAGICKCORE_CONFIGURE_PATH
-#define MAGICKCORE_CONFIGURE_PATH "/usr/local/Cellar/imagemagick/7.0.5-5/etc/ImageMagick-7/"
+#define MAGICKCORE_CONFIGURE_PATH "/Users/johannespichler/Downloads/newTest/build/etc/ImageMagick-7/"
 #endif
 
 /* Subdirectory of lib where architecture-dependent configuration files live.
@@ -51,7 +51,7 @@
 
 /* Directory where ImageMagick documents live. */
 #ifndef MAGICKCORE_DOCUMENTATION_PATH
-#define MAGICKCORE_DOCUMENTATION_PATH "/usr/local/Cellar/imagemagick/7.0.5-5/share/doc/ImageMagick-7/"
+#define MAGICKCORE_DOCUMENTATION_PATH "/Users/johannespichler/Downloads/newTest/build/share/doc/ImageMagick-7/"
 #endif
 
 /* Define if you have Display Postscript */
@@ -62,11 +62,13 @@
 
 /* Directory where executables are installed. */
 #ifndef MAGICKCORE_EXECUTABLE_PATH
-#define MAGICKCORE_EXECUTABLE_PATH "/usr/local/Cellar/imagemagick/7.0.5-5/bin/"
+#define MAGICKCORE_EXECUTABLE_PATH "/Users/johannespichler/Downloads/newTest/build/bin/"
 #endif
 
 /* Define if you have FFTW library */
-/* #undef FFTW_DELEGATE */
+#ifndef MAGICKCORE_FFTW_DELEGATE
+#define MAGICKCORE_FFTW_DELEGATE 1
+#endif
 
 /* filter subdirectory. */
 #ifndef MAGICKCORE_FILTER_DIRNAME
@@ -83,9 +85,7 @@
 /* #undef FPX_DELEGATE */
 
 /* Define if you have FREETYPE library */
-#ifndef MAGICKCORE_FREETYPE_DELEGATE
-#define MAGICKCORE_FREETYPE_DELEGATE 1
-#endif
+/* #undef FREETYPE_DELEGATE */
 
 /* Define if you have Ghostscript library or framework */
 /* #undef GS_DELEGATE */
@@ -889,49 +889,31 @@
 #endif
 
 /* Define to 1 if you have the <tiffconf.h> header file. */
-#ifndef MAGICKCORE_HAVE_TIFFCONF_H
-#define MAGICKCORE_HAVE_TIFFCONF_H 1
-#endif
+/* #undef HAVE_TIFFCONF_H */
 
 /* Define to 1 if you have the `TIFFIsBigEndian' function. */
-#ifndef MAGICKCORE_HAVE_TIFFISBIGENDIAN
-#define MAGICKCORE_HAVE_TIFFISBIGENDIAN 1
-#endif
+/* #undef HAVE_TIFFISBIGENDIAN */
 
 /* Define to 1 if you have the `TIFFIsCODECConfigured' function. */
-#ifndef MAGICKCORE_HAVE_TIFFISCODECCONFIGURED
-#define MAGICKCORE_HAVE_TIFFISCODECCONFIGURED 1
-#endif
+/* #undef HAVE_TIFFISCODECCONFIGURED */
 
 /* Define to 1 if you have the `TIFFMergeFieldInfo' function. */
-#ifndef MAGICKCORE_HAVE_TIFFMERGEFIELDINFO
-#define MAGICKCORE_HAVE_TIFFMERGEFIELDINFO 1
-#endif
+/* #undef HAVE_TIFFMERGEFIELDINFO */
 
 /* Define to 1 if you have the `TIFFReadEXIFDirectory' function. */
-#ifndef MAGICKCORE_HAVE_TIFFREADEXIFDIRECTORY
-#define MAGICKCORE_HAVE_TIFFREADEXIFDIRECTORY 1
-#endif
+/* #undef HAVE_TIFFREADEXIFDIRECTORY */
 
 /* Define to 1 if you have the `TIFFSetErrorHandlerExt' function. */
-#ifndef MAGICKCORE_HAVE_TIFFSETERRORHANDLEREXT
-#define MAGICKCORE_HAVE_TIFFSETERRORHANDLEREXT 1
-#endif
+/* #undef HAVE_TIFFSETERRORHANDLEREXT */
 
 /* Define to 1 if you have the `TIFFSetTagExtender' function. */
-#ifndef MAGICKCORE_HAVE_TIFFSETTAGEXTENDER
-#define MAGICKCORE_HAVE_TIFFSETTAGEXTENDER 1
-#endif
+/* #undef HAVE_TIFFSETTAGEXTENDER */
 
 /* Define to 1 if you have the `TIFFSetWarningHandlerExt' function. */
-#ifndef MAGICKCORE_HAVE_TIFFSETWARNINGHANDLEREXT
-#define MAGICKCORE_HAVE_TIFFSETWARNINGHANDLEREXT 1
-#endif
+/* #undef HAVE_TIFFSETWARNINGHANDLEREXT */
 
 /* Define to 1 if you have the `TIFFSwabArrayOfTriples' function. */
-#ifndef MAGICKCORE_HAVE_TIFFSWABARRAYOFTRIPLES
-#define MAGICKCORE_HAVE_TIFFSWABARRAYOFTRIPLES 1
-#endif
+/* #undef HAVE_TIFFSWABARRAYOFTRIPLES */
 
 /* Define to 1 if you have the `times' function. */
 #ifndef MAGICKCORE_HAVE_TIMES
@@ -1105,12 +1087,12 @@
 
 /* Directory where ImageMagick architecture headers live. */
 #ifndef MAGICKCORE_INCLUDEARCH_PATH
-#define MAGICKCORE_INCLUDEARCH_PATH "/usr/local/Cellar/imagemagick/7.0.5-5/include/ImageMagick-7/"
+#define MAGICKCORE_INCLUDEARCH_PATH "/Users/johannespichler/Downloads/newTest/build/include/ImageMagick-7/"
 #endif
 
 /* Directory where ImageMagick headers live. */
 #ifndef MAGICKCORE_INCLUDE_PATH
-#define MAGICKCORE_INCLUDE_PATH "/usr/local/Cellar/imagemagick/7.0.5-5/include/ImageMagick-7/"
+#define MAGICKCORE_INCLUDE_PATH "/Users/johannespichler/Downloads/newTest/build/include/ImageMagick-7/"
 #endif
 
 /* ImageMagick is formally installed under prefix */
@@ -1134,13 +1116,13 @@
 
 /* Directory where architecture-dependent files live. */
 #ifndef MAGICKCORE_LIBRARY_PATH
-#define MAGICKCORE_LIBRARY_PATH "/usr/local/Cellar/imagemagick/7.0.5-5/lib/ImageMagick/"
+#define MAGICKCORE_LIBRARY_PATH "/Users/johannespichler/Downloads/newTest/build/lib/ImageMagick-7.0.5/"
 #endif
 
 /* Subdirectory of lib where ImageMagick architecture dependent files are
    installed. */
 #ifndef MAGICKCORE_LIBRARY_RELATIVE_PATH
-#define MAGICKCORE_LIBRARY_RELATIVE_PATH "ImageMagick"
+#define MAGICKCORE_LIBRARY_RELATIVE_PATH "ImageMagick-7.0.5"
 #endif
 
 /* Binaries in libraries path base name (will be during install linked to bin)
@@ -1297,7 +1279,7 @@
 
 /* Directory where architecture-independent configuration files live. */
 #ifndef MAGICKCORE_SHARE_PATH
-#define MAGICKCORE_SHARE_PATH "/usr/local/Cellar/imagemagick/7.0.5-5/share/ImageMagick-7/"
+#define MAGICKCORE_SHARE_PATH "/Users/johannespichler/Downloads/newTest/build/share/ImageMagick-7/"
 #endif
 
 /* Subdirectory of lib where architecture-independent configuration files
@@ -1408,9 +1390,7 @@
 #endif
 
 /* Define if you have TIFF library */
-#ifndef MAGICKCORE_TIFF_DELEGATE
-#define MAGICKCORE_TIFF_DELEGATE 1
-#endif
+/* #undef TIFF_DELEGATE */
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 #ifndef MAGICKCORE_TIME_WITH_SYS_TIME
@@ -1492,9 +1472,7 @@
 #endif
 
 /* Build self-contained, embeddable, zero-configuration ImageMagick */
-#ifndef MAGICKCORE_ZERO_CONFIGURATION_SUPPORT
-#define MAGICKCORE_ZERO_CONFIGURATION_SUPPORT 1
-#endif
+/* #undef ZERO_CONFIGURATION_SUPPORT */
 
 /* Define if you have ZLIB library */
 #ifndef MAGICKCORE_ZLIB_DELEGATE

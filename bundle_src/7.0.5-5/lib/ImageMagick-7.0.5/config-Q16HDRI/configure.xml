@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuremap [
+<!ELEMENT configuremap (configure)+>
+<!ELEMENT configure (#PCDATA)>
+<!ATTLIST configure name CDATA #REQUIRED>
+<!ATTLIST configure value CDATA #REQUIRED>
+]>
+<configuremap>
+  <configure name="CC" value="gcc"/>
+  <configure name="CFLAGS" value="-I/usr/include/libxml2 -I/usr/local/Cellar/libpng/1.6.29/include/libpng16 -I/usr/local/Cellar/xz/5.2.3/include -I/usr/local/Cellar/fftw/3.3.6-pl2/include    -g -O2 -Wall -mtune=haswell -fexceptions -D_FORTIFY_SOURCE=0 -D_THREAD_SAFE -pthread -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="CODER_PATH" value="/Users/johannespichler/Downloads/newTest/build/lib/ImageMagick-7.0.5/modules-Q16HDRI/coders"/>
+  <configure name="CONFIGURE_PATH" value="/Users/johannespichler/Downloads/newTest/build/etc/ImageMagick-7/"/>
+  <configure name="CONFIGURE" value="./configure  '--enable-static' '--disable-shared' '--enable-delegate-build' '--without-modules' '--without-freetype' '--without-x' '--prefix=/Users/johannespichler/Downloads/newTest/build/'"/>
+  <configure name="COPYRIGHT" value="Copyright (C) 1999-2016 ImageMagick Studio LLC"/>
+  <configure name="CPPFLAGS" value="-I/Users/johannespichler/Downloads/newTest/build/include/ImageMagick-7"/>
+  <configure name="CXXFLAGS" value="-g -O2 -D_THREAD_SAFE -pthread"/>
+  <configure name="CXX" value="g++"/>
+  <configure name="DEFS" value="-DHAVE_CONFIG_H"/>
+  <configure name="DELEGATES" value="bzlib mpeg fftw jng jpeg lzma png webp xml zlib"/>
+  <configure name="DISTCHECK_CONFIG_FLAGS" value=" --disable-deprecated  --with-quantum-depth=16  --with-jemalloc=no  --with-umem=no  --with-autotrace=no  --with-freetype=no  --with-gslib=no  --with-fontpath=  --with-rsvg=no  --with-perl=no "/>
+  <configure name="DOCUMENTATION_PATH" value="/Users/johannespichler/Downloads/newTest/build/share/doc/ImageMagick-7"/>
+  <configure name="EXEC-PREFIX" value="/Users/johannespichler/Downloads/newTest/build"/>
+  <configure name="EXECUTABLE_PATH" value="/Users/johannespichler/Downloads/newTest/build/bin"/>
+  <configure name="FEATURES" value="DPC HDRI Cipher"/>
+  <configure name="FILTER_PATH" value="/Users/johannespichler/Downloads/newTest/build/lib/ImageMagick-7.0.5/modules-Q16HDRI/filters"/>
+  <configure name="GIT_REVISION" value="11848" />
+  <configure name="HOST" value="x86_64-apple-darwin16.5.0"/>
+  <configure name="INCLUDE_PATH" value="/Users/johannespichler/Downloads/newTest/build/include/ImageMagick-7"/>
+  <configure name="LDFLAGS" value="-L/Users/johannespichler/Downloads/newTest/build/lib  -L/Users/johannespichler/Downloads/newTest/ImageMagick-7.0.5-5/fftw/.libs -L/Users/johannespichler/Downloads/newTest/ImageMagick-7.0.5-5/fftw -L/Users/johannespichler/Downloads/newTest/ImageMagick-7.0.5-5/jpeg/.libs -L/Users/johannespichler/Downloads/newTest/ImageMagick-7.0.5-5/jpeg -L/Users/johannespichler/Downloads/newTest/ImageMagick-7.0.5-5/png/.libs -L/Users/johannespichler/Downloads/newTest/ImageMagick-7.0.5-5/png -L/Users/johannespichler/Downloads/newTest/ImageMagick-7.0.5-5/tiff/libtiff/.libs -L/Users/johannespichler/Downloads/newTest/ImageMagick-7.0.5-5/tiff/libtiff -L/Users/johannespichler/Downloads/newTest/ImageMagick-7.0.5-5/webp"/>
+  <configure name="LIBRARY_PATH" value="/Users/johannespichler/Downloads/newTest/build/lib/ImageMagick-7.0.5"/>
+  <configure name="LIBS" value="      -ljpeg   -L/usr/local/Cellar/libpng/1.6.29/lib -lpng16   -L/usr/local/Cellar/fftw/3.3.6-pl2/lib -lfftw3    -lwebp       -L/usr/local/Cellar/xz/5.2.3/lib -llzma -lbz2     -lxml2  -lz  -lm     "/>
+  <configure name="LIB_VERSION_NUMBER" value="7,0,5,5"/>
+  <configure name="LIB_VERSION" value="0x705"/>
+  <configure name="NAME" value="ImageMagick"/>
+  <configure name="PCFLAGS" value="-DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="PREFIX" value="/Users/johannespichler/Downloads/newTest/build"/>
+  <configure name="QuantumDepth" value="16"/>
+  <configure name="RELEASE_DATE" value="2017-05-03"/>
+  <configure name="SHAREARCH_PATH" value="/Users/johannespichler/Downloads/newTest/build/lib/ImageMagick-7.0.5/config-Q16HDRI"/>
+  <configure name="SHARE_PATH" value="/Users/johannespichler/Downloads/newTest/build/share/ImageMagick-7"/>
+  <configure name="TARGET_CPU" value="x86_64"/>
+  <configure name="TARGET_OS" value="darwin16.5.0"/>
+  <configure name="TARGET_VENDOR" value="apple"/>
+  <configure name="VERSION" value="7.0.5"/>
+  <configure name="WEBSITE" value="http://www.imagemagick.org"/>
+</configuremap>

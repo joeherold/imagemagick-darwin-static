@@ -4,6 +4,37 @@ imagemagick static binaries for Mac OSX x64
 
 When you want to write text into images, you have to pass the font explicitly.
 
+## Important
+
+you have to set the an environment variable to use it via spawn or cli.
+
+``` code
+// like you do in the bash:
+export MAGICK_HOME= "path/to/node_modules/imagemagick-darwin-static/bin/osx/imagemagick/7.0.5-5/"
+export DYLD_LIBRARY_PATH= "path/to/node_modules/imagemagick-darwin-static/bin/osx/imagemagick/7.0.5-5/lib/"
+
+
+// with spawn, this can be done via the options parameter:
+// child_process.spawn(command[, args][, options])
+
+var convert_binary= "path/to/node_modules/imagemagick-darwin-static/bin/osx/imagemagick/7.0.5-5/bin/convert"
+var MAGICK_HOME= "path/to/node_modules/imagemagick-darwin-static/bin/osx/imagemagick/7.0.5-5/"
+var DYLD_LIBRARY_PATH= "path/to/node_modules/imagemagick-darwin-static/bin/osx/imagemagick/7.0.5-5/lib/"
+
+var spawn = require("child_process").spawn;
+
+
+
+var proc = spawn(convert_binary,
+                ['/path/to/infille.jpg', '/path/to/outfile.png'],
+                 {
+                    MAGICK_HOME: MAGICK_HOME,
+                    DYLD_LIBRARY_PATH: DYLD_LIBRARY_PATH
+                  }
+);
+```
+This is, because the dynamic libs are located in the lib folder inside this package. And imagemagick needs to know about this.
+
 ## Motivation
 Use imagemagick in electron.atom applications for mac
 For more information about electron atom see [https://electron.atom.io/](https://electron.atom.io/)

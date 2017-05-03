@@ -5,7 +5,7 @@
 #
 #
 
-prefix=/usr/local/Cellar/imagemagick/7.0.5-5
+prefix=/Users/johannespichler/Downloads/newTest/build
 exec_prefix=${prefix}
 
 usage='Usage: Magick++-config [--cppflags] [--cxxflags] [--exec-prefix] [--ldflags] [--libs] [--prefix] [--version]

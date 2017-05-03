@@ -4,7 +4,7 @@
 # required to use the MagickCore library.
 #
 
-prefix=/usr/local/Cellar/imagemagick/7.0.5-5
+prefix=/Users/johannespichler/Downloads/newTest/build
 exec_prefix=${prefix}
 
 usage="\
@@ -53,10 +53,10 @@ while test $# -gt 0; do
       pkg-config --libs MagickCore
       ;;
     --coder-path)
-      echo "/usr/local/Cellar/imagemagick/7.0.5-5/lib/ImageMagick/modules-Q16HDRI/coders"
+      echo "/Users/johannespichler/Downloads/newTest/build/lib/ImageMagick-7.0.5/modules-Q16HDRI/coders"
       ;;
     --filter-path)
-      echo "/usr/local/Cellar/imagemagick/7.0.5-5/lib/ImageMagick/modules-Q16HDRI/filters"
+      echo "/Users/johannespichler/Downloads/newTest/build/lib/ImageMagick-7.0.5/modules-Q16HDRI/filters"
       ;;
     *)
       echo "${usage}" 1>&2

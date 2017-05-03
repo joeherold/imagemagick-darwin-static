@@ -4,7 +4,7 @@
 # required to use the MagickWand library.
 #
 
-prefix=/usr/local/Cellar/imagemagick/7.0.5-5
+prefix=/Users/johannespichler/Downloads/newTest/build
 exec_prefix=${prefix}
 
 usage="\

@@ -1,8 +1,8 @@
-prefix=/usr/local/Cellar/imagemagick/7.0.5-5
+prefix=/Users/johannespichler/Downloads/newTest/build
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include/ImageMagick-7
-includearchdir=/usr/local/Cellar/imagemagick/7.0.5-5/include/ImageMagick-7
+includearchdir=/Users/johannespichler/Downloads/newTest/build/include/ImageMagick-7
 libname=MagickCore-7.Q16HDRI
  
 Name: ImageMagick
@@ -11,4 +11,4 @@ URL: https://www.imagemagick.org
 Version: 7.0.5
 Cflags:  -I${includearchdir} -I${includedir} -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16
 Libs: -L${libdir} -l${libname}
-Libs.private: -L${libdir} -l${libname}    -ltiff -L/usr/local/opt/freetype/lib -lfreetype  -ljpeg   -L/usr/local/Cellar/libpng/1.6.29/lib -lpng16       -lwebp       -L/usr/local/Cellar/xz/5.2.3/lib -llzma -lbz2     -lxml2  -lz  -lm      -lm
+Libs.private: -L${libdir} -l${libname}       -ljpeg   -L/usr/local/Cellar/libpng/1.6.29/lib -lpng16   -L/usr/local/Cellar/fftw/3.3.6-pl2/lib -lfftw3    -lwebp       -L/usr/local/Cellar/xz/5.2.3/lib -llzma -lbz2     -lxml2  -lz  -lm      -lm

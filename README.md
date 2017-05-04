@@ -8,12 +8,12 @@ When you want to write text into images, you have to pass the font explicitly.
 
 you have to set the an environment variable to use it via spawn or cli.
 
-``` code
+``` bash
 // like you do in the bash:
 export MAGICK_HOME= "path/to/node_modules/imagemagick-darwin-static/bin/osx/imagemagick/7.0.5-5/"
 export DYLD_LIBRARY_PATH= "path/to/node_modules/imagemagick-darwin-static/bin/osx/imagemagick/7.0.5-5/lib/"
-
-
+```
+``` javascript
 // with spawn, this can be done via the options parameter:
 // child_process.spawn(command[, args][, options])
 

@@ -64,21 +64,23 @@ For Windows (32 and 64-bit) please use graphicsmagic-static.
 Best usage is with npm module gm
 
 ``` js
-var os = require("os");
-var graphicsmagick = require("graphicsmagick-static");
-var imagemagick = require("imagemagick-darwin-static");
-var imageHandler = null;
+const path = require('path');
 
-if (os.platform() == "win32") {
-    gm = require("gm").subClass({
-        appPath: path.join(graphicsmagick.path, "/")
-    })
+const graphicsmagick = require('graphicsmagick-static');
+const imagemagick = require('imagemagick-darwin-static');
+
+const {subClass} = require('gm');
+let gm;
+
+if (os.platform() == 'win32') {
+    gm = subClass({
+        appPath: path.join(graphicsmagick.path, '/')
+    });
 } else {
-
-    gm = require("gm").subClass({
+    gm = subClass({
         imageMagick: true,
-        appPath: path.join(imagemagick, "/")
-    })
+        appPath: path.join(imagemagick.path, '/')
+    });
 }
 
 // then do any stuff you need
